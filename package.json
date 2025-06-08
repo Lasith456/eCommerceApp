@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "install:all": "npm-run-all install:admin install:frontend install:backend",
+    "install:all":  "concurrently \"cd admin && npm install\" \"cd frontend && npm install\" \"cd backend && npm install\",
     "install:admin": "cd admin && npm install",
     "install:frontend": "cd frontend && npm install",
     "install:backend": "cd backend && npm install",
