@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "install:all": "concurrently \"cd admin && npm install\" \"cd frontend && npm install\" \"cd backend && npm install\"",
+    "build:all": "concurrently \"cd admin && npm run build\" \"cd frontend && npm run build\" \"cd backend && npm run build\"",
+    "start:all": "concurrently \"cd admin && npm start\" \"cd frontend && npm start\" \"cd backend && npm start\""
   },
   "dependencies": {
     "axios": "^1.7.4",
